@@ -1,4 +1,6 @@
 import { Stack } from "@mui/material";
+import Inbox from "./Inbox";
+import Messagesection from "./Messagesection";
 
 const Message_present = () => {
   return (
@@ -8,7 +10,16 @@ const Message_present = () => {
       height={"100%"}
       // border={"1px solid red"}
       bgcolor={"var( --secondary-color)"}
-    ></Stack>
+      overflow={"hidden"}
+    >
+      <Stack height={"100%"} width={"20%"} >
+        <Inbox />
+      </Stack>
+      <Stack height={"100%"} width={"60%"}>
+        <Messagesection/>
+      </Stack>
+      <Stack height={"100%"} width={"20%"}></Stack>
+    </Stack>
   );
 };
 
